@@ -20,7 +20,7 @@ function App() {
   }
 
   const convert = () => {
-    setConvertedAmount(amount*currencyInfo[to])
+    setConvertedAmount(amount * currencyInfo[to])
   }
 
   return (
@@ -43,7 +43,7 @@ function App() {
                             label="From"
                             amount={amount}
                             currencyOptions={options}
-                            onCurrencyChange={(currency) => setAmount(amount)}
+                            onCurrencyChange={(currency) => setAmount(currency)}
                             selectCurrency={from}
                             onAmountChange={(amount) => setAmount(amount)}
                         />
@@ -63,7 +63,7 @@ function App() {
                              amount={convertedAmount}
                              currencyOptions={options}
                              onCurrencyChange={(currency) =>setTo(currency)}
-                             selectCurrency={from}
+                             selectCurrency={to}
                              amountDisable
                         />
                     </div>
@@ -74,7 +74,8 @@ function App() {
             </div>
         </div>
     </div>
-)
+);
+
 }
 
 export default App
